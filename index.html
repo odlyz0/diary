@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Diary with Mood Tracker</title>
+    <title>Your Personal Diary</title>
+    <link rel="icon"  type="image/jpg" href="book.jpg">
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
     <div class="container">
         <h1>Your Personal Diary</h1>
         <div class="entry-form">
-            <textarea id="diaryEntry" placeholder="What's on your mind?..."></textarea>
+            <textarea id="diaryEntry" placeholder="What happend today?..."></textarea>
             <div class="mood-selector">
                 <label for="mood">Mood:</label>
                 <select id="mood">
-                    <option value="happy">Happy</option>
-                    <option value="sad">Sad</option>
-                    <option value="excited">Excited</option>
-                    <option value="angry">Angry</option>
-                    <option value="neutral">Neutral</option>
+                    <option value="Happy">Happy</option>
+                    <option value="Sad">Sad</option>
+                    <option value="Excited">Excited</option>
+                    <option value="Angry">Angry</option>
+                    <option value="Neutral">Neutral</option>
                 </select>
             </div>
             <button onclick="saveEntry()">Save Entry</button>

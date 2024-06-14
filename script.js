@@ -8,11 +8,12 @@ function saveEntry() {
     const date = new Date().toLocaleDateString();
     
     if (entryText.trim() === "") {
-        alert("Please write something in your diary entry.");
+        alert("Please write something in your diary!");
         return;
     }
 
     const entry = {
+        id: Date.now(),
         date: date,
         text: entryText,
         mood: mood
@@ -51,6 +52,19 @@ function displayEntries() {
         moodP.innerText = `Mood: ${entry.mood}`;
         entryDiv.appendChild(moodP);
 
+        const deleteBtn = document.createElement("button");
+        deleteBtn.classList.add("delete-btn");
+        deleteBtn.innerText = "Delete";
+        deleteBtn.onclick = () => deleteEntry(entry.id);
+        entryDiv.appendChild(deleteBtn);
+
         entriesList.appendChild(entryDiv);
     });
+}
+
+function deleteEntry(id) {
+    let entries = JSON.parse(localStorage.getItem("entries")) || [];
+    entries = entries.filter(entry => entry.id !== id);
+    localStorage.setItem("entries", JSON.stringify(entries));
+    displayEntries();
 }
