@@ -75,3 +75,21 @@ h1, h2 {
   padding: 5px 10px;
   cursor: pointer;
 }
+
+.button-container {
+  text-align: center;
+}
+
+#button {
+  color: #1c1303;
+  background-color: #6a5346;
+  width: 250px;
+  height: 30px;
+}
+
+.entry img.entry-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border: 1px solid #48320d;
+}

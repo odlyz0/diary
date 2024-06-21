@@ -6,23 +6,29 @@
     <title>Your Personal Diary</title>
     <link rel="icon"  type="image/jpg" href="book.jpg">
     <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://kit.fontawesome.com/27e5a096fd.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
         <h1>Your Personal Diary</h1>
         <div class="entry-form">
-            <textarea id="diaryEntry" placeholder="What happend today?..."></textarea>
+            <textarea id="diaryEntry" placeholder="What happened today?..."></textarea>
             <div class="mood-selector">
                 <label for="mood">Mood:</label>
                 <select id="mood">
-                    <option value="Happy">Happy</option>
-                    <option value="Sad">Sad</option>
-                    <option value="Excited">Excited</option>
-                    <option value="Angry">Angry</option>
-                    <option value="Neutral">Neutral</option>
+                    <option value="happy"><i class="fa-solid fa-face-smile"></i> Happy</option>
+                    <option value="sad"><i class="fa-solid fa-face-frown"></i> Sad</option>
+                    <option value="excited"><i class="fa-solid fa-face-laugh"></i> Excited</option>
+                    <option value="angry"><i class="fa-solid fa-face-angry"></i> Angry</option>
+                    <option value="neutral"><i class="fa-solid fa-face-meh"></i> Neutral</option>
+                    <option value="depressed"><i class="fa-solid fa-face-sad-tear"></i> Depressed</option>
+                    <option value="irritated"><i class="fa-solid fa-face-rolling-eyes"></i> Irritated</option>
                 </select>
             </div>
-            <button onclick="saveEntry()">Save Entry</button>
+            <input  type="file" id="imageUpload" accept="image/*">
+            <div class="button-container">
+                <button id="button" onclick="saveEntry()">Save Entry</button>
+            </div>
         </div>
         <div class="entries">
             <h2>Previous Entries</h2>
